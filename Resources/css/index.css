@@ -1,0 +1,391 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+scroll-behavior: smooth;
+margin: 0;
+padding: 0;
+border: 0;
+}
+
+body {
+  margin: 0 auto;
+  font-family: Baskerville;
+  font-size: 20px;
+  text-align: center;
+  height:100%;
+}
+
+p {
+margin: 0 auto;
+max-width: 750px;
+padding: 2rem;
+
+}
+
+.link {
+  text-decoration: none;
+  font-style: italic;
+  font-weight: bold;
+  color: #303030;
+}
+
+.link:hover {
+font-style: normal;
+text-decoration: underline;
+}
+
+main h1 {
+ font-family: 'GenomeThin';
+ font-weight: 900;
+ font-style: normal;
+ letter-spacing: 1.75px;
+ font-size: 2em;
+}
+
+main h1::before {
+  display: block;
+  content: " ";
+  margin-top: -285px;
+  height: 285px;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.hero {
+  width:100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+  color: white;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1),rgba(0, 0, 0, 0.1)), url('../img/IrishDesign.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+}
+
+.hero h1 {
+  font-family: 'MiamaNuevaMedium';
+  font-weight: normal;
+  font-style: italic;
+  font-size: 5em;
+  margin-top: 0;
+  margin-bottom: 0.5em;
+}
+
+.hero span {
+  font-weight: 900;
+  font-size: 1.25em;
+}
+
+.hero h2 {
+  font-family: 'GenomeThin';
+   font-weight: lighter;
+   font-style: normal;
+   letter-spacing: 1.75px;
+}
+
+.hero-inner {
+  border: 1px white solid;
+  padding-top: 3em;
+  padding-bottom: 2em;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  border-radius: 2%;
+
+}
+
+.hero-inner a {
+
+}
+
+/* Imported Icon from css.gg*/
+.hero-button {
+  positon: absolute;
+  transform: translate(50%, 500%);
+}
+
+.hero-button span {
+  display: block;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  border-bottom: 1px solid #fff;
+  border-right: 1px solid #fff;
+  transform: rotate(45deg);
+  animation: animate 2s infinite;
+  align-items:flex-end;
+}
+
+.hero-button span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.hero-button span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes animate
+{
+  0%
+  {
+    opacity: 0;
+  }
+  50%
+  {
+    opacity: 1;
+  }
+  100%
+  {
+    opacity: 0;
+  }
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  background-color: #303030;
+  height: 40px;
+  width: 100%;
+  display: flex;
+}
+
+nav ul {
+height: 100%;
+width: 360px;
+margin: 8px auto;
+}
+
+nav ul li {
+  list-style: none;
+  text-decoration: none;
+  float: left;
+
+}
+
+li a {
+  text-decoration: none;
+  color: white;
+  scroll-behavior: smooth;
+  margin: 8px 8px;
+}
+
+li a:hover {
+  font-weight: bold;
+  color: black;
+
+}
+
+#portfolio {
+  width:100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+  color: white;
+  background: rgba(113, 142, 142, 0.9);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+}
+
+#about {
+  width:100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+  color: white;
+  background: rgba(108, 127, 102, 0.9);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+}
+
+#contact {
+  width:100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+  color: white;
+  background: rgba(127, 102, 102, 0.8);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+}
+
+.nav-button {
+  positon: fixed;
+  transform: translate(50%, 240%);
+}
+
+.nav-button span {
+  display: block;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  border-bottom: 1px solid #fff;
+  border-right: 1px solid #fff;
+  transform: rotate(45deg);
+  animation: animate 2s infinite;
+  align-items:flex-end;
+}
+
+.nav-button span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.nav-button span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes animate
+{
+  0%
+  {
+    opacity: 0;
+  }
+  50%
+  {
+    opacity: 1;
+  }
+  100%
+  {
+    opacity: 0;
+  }
+}
+
+.top-button {
+  positon: absolute;
+  transform: translate(50%, 500%);
+}
+
+.top-button span {
+  display: block;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  border-bottom: 1px solid #fff;
+  border-right: 1px solid #fff;
+  transform: rotate(225deg);
+  animation: animate 2s infinite;
+  align-items:flex-end;
+}
+
+.top-button span:nth-child(1) {
+  animation-delay: 0.4s;
+}
+.top-button span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+@keyframes animate
+{
+  0%
+  {
+    opacity: 0;
+  }
+  50%
+  {
+    opacity: 1;
+  }
+  100%
+  {
+    opacity: 0;
+  }
+}
+
+.portfolio-items {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 200px;
+  width: 100%;
+
+}
+
+.image-container{
+	width: 350px;
+    position: relative;
+    float: left;
+    margin: 0 4px;
+}
+
+.image {
+  width: 330px;
+  height:380px;
+  margin: 5px;
+  flex: 1 1 0;
+  border: 1px solid white;
+  position: relative;
+  display: block;
+  z-index: 1;
+  background-color: #f2f2f2;
+}
+
+
+.overlay {
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1;
+  width: 93%;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+  z-index: 2;
+}
+
+.image-container:hover .overlay {
+  opacity: 1;
+}
+
+.see-more {
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+input {
+  font-size: 1.25em;
+  font-family: Baskerville;
+  color: white;
+  border: 1px solid #f2f2f2;
+  border-radius: 5px;
+  background-color: transparent;
+  padding: 20px 60px;
+}
+
+input:hover {
+  color: #303030;
+  background-color: #f2f2f2;
+  border: 2px solid #303030;
+  border-radius: 5px;
+}
+
+.contact {
+  border: 1px solid #fff;
+  border-radius: 5px;
+  padding: 30px;
+
+}
+
+footer p {
+  display: inline-block;
+  font-size: 0.7em;
+}
