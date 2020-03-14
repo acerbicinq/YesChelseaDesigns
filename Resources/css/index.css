@@ -1,3 +1,6 @@
+
+/*----General CSS-----*/
+
 * {
   box-sizing: border-box;
 }
@@ -36,6 +39,46 @@ font-style: normal;
 text-decoration: underline;
 }
 
+/*----Sticky Nav-----*/
+nav {
+  position: sticky;
+  top: 0;
+  background-color: #303030;
+  height: 40px;
+  width: 100%;
+  display: flex;
+  z-index: 2;
+}
+
+nav ul {
+height: 100%;
+width: 360px;
+margin: 8px auto;
+}
+
+nav ul li {
+  list-style: none;
+  text-decoration: none;
+  float: left;
+
+}
+
+li a {
+  text-decoration: none;
+  color: white;
+  scroll-behavior: smooth;
+  margin: 8px 8px;
+}
+
+li a:hover {
+  font-weight: bold;
+  color: black;
+
+}
+
+
+/*----Home Section CSS-----*/
+
 main h1 {
  font-family: 'Baskerville';
  font-weight: 900;
@@ -44,12 +87,6 @@ main h1 {
  font-size: 2.5em;
 }
 
-/*main h1::before {
-  display: block;
-  content: " ";
-  visibility: hidden;
-  pointer-events: none;
-}*/
 
 .hero {
   width:100vw;
@@ -64,6 +101,8 @@ main h1 {
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: scroll;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 .hero h1 {
@@ -97,11 +136,67 @@ main h1 {
 
 }
 
-.hero-inner a {
+/*----Portfolio Section CSS-----*/
+#portfolio {
+  width:100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+  color: white;
+  background: rgba(113, 142, 142, 0.9);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  overflow: hidden;
+}
+/*----About Section CSS-----*/
+#about {
+  width:100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+  color: white;
+  background: rgba(108, 127, 102, 0.9);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  overflow: hidden;
+}
+/*----Contact Section CSS-----*/
+#contact {
+  width:100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+  color: white;
+  background: rgba(127, 102, 102, 0.8);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  overflow: hidden;
+}
+.contact {
+  border: 1px solid #fff;
+  border-radius: 5px;
+  padding: 30px;
 
 }
+footer p {
+  display: inline-block;
+  font-size: 0.7em;
+}
 
-/* Imported Icon from css.gg*/
+
+/*----Animated Scroll Down Button in Home-----*/
 .hero-button {
   positon: absolute;
   transform: translate(50%, 500%);
@@ -142,86 +237,8 @@ main h1 {
   }
 }
 
-nav {
-  position: sticky;
-  top: 0;
-  background-color: #303030;
-  height: 40px;
-  width: 100%;
-  display: flex;
-}
 
-nav ul {
-height: 100%;
-width: 360px;
-margin: 8px auto;
-}
-
-nav ul li {
-  list-style: none;
-  text-decoration: none;
-  float: left;
-
-}
-
-li a {
-  text-decoration: none;
-  color: white;
-  scroll-behavior: smooth;
-  margin: 8px 8px;
-}
-
-li a:hover {
-  font-weight: bold;
-  color: black;
-
-}
-
-#portfolio {
-  width:100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-flow: column nowrap;
-  color: white;
-  background: rgba(113, 142, 142, 0.9);
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-}
-
-#about {
-  width:100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-flow: column nowrap;
-  color: white;
-  background: rgba(108, 127, 102, 0.9);
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-}
-
-#contact {
-  width:100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-flow: column nowrap;
-  color: white;
-  background: rgba(127, 102, 102, 0.8);
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-}
-
+/*----Animated Scroll Down Button in Portfolio & About-----*/
 .nav-button {
   position: static;
   transform: translate(50%, 150%);
@@ -262,8 +279,10 @@ li a:hover {
   }
 }
 
+
+/*----Animated Scroll to Top Button in Contact-----*/
 .top-button {
-  positon: absolute;
+  position: absolute;
   transform: translate(50%, 500%);
 }
 
@@ -301,8 +320,10 @@ li a:hover {
     opacity: 0;
   }
 }
-
+/*----Flexbox Images withing Portfolio Section-----*/
 .portfolio-items {
+  padding-left: 15%;
+  padding-right: 15%;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -316,17 +337,18 @@ li a:hover {
     position: relative;
     display: inline-flex;
     margin: 0 4%;
+    justify-content: center;
+    flex: 1 2 1;
 }
 
 .image {
   max-height: 450px;
   max-width: 400px;
   margin: 0%;
-  flex: 1 1 0;
-  border: 1px solid white;
+  border: 1.5px solid white;
   position: relative;
-  display: inline-flex;
-  z-index: 1;
+  display: block;
+  z-index: 0;
   background-color: #f2f2f2;
   background-size: cover;
 }
@@ -334,28 +356,35 @@ li a:hover {
 
 .overlay {
   position: absolute;
-  bottom: 2.5%;
-  left: 2.5%;
+  bottom: 0%;
+  left: 5%;
   background: rgb(0, 0, 0);
   background: rgba(0, 0, 0, 0.5); /* Black see-through */
   color: #f1f1f1;
-  width: 94.5%;
+  width: 100%;
+  max-width: 400px;
   transition: .5s ease;
-  opacity:0;
+  opacity: 0;
   color: white;
   padding: 5%;
   text-align: center;
-  z-index: 2;
+  z-index: 1;
 }
 
 .image-container:hover .overlay {
   opacity: 1;
 }
 
-.see-more {
-  border: 1px solid white;
-  border-radius: 5px;
-  padding: 5px;
+/*----Resume Button in About Section-----*/
+.resume-button {
+display: block;
+margin: 0 auto;
+transform: translateX(-15%);
+}
+
+form {
+display: block;
+width: 50%;
 }
 
 button {
@@ -365,25 +394,14 @@ button {
   border: 1px solid #f2f2f2;
   border-radius: 5px;
   background-color: transparent;
-  padding: 8% 95%;
-  margin-left: -80%;
+  padding: 8% 80%;
+
+
 }
 
 button:hover {
   color: #303030;
   background-color: #f2f2f2;
-  border: 2px solid #303030;
+  border: 1px solid #303030;
   border-radius: 5px;
-}
-
-.contact {
-  border: 1px solid #fff;
-  border-radius: 5px;
-  padding: 30px;
-
-}
-
-footer p {
-  display: inline-block;
-  font-size: 0.7em;
 }
