@@ -24,23 +24,23 @@ p {
 margin: 0 auto;
 max-width: 750px;
 padding: 2rem;
-
+text-align: center;
 }
 
-.link {
+a {
   text-decoration: none;
   font-style: italic;
   font-weight: bold;
   color: #303030;
 }
 
-.link:hover {
+a:hover {
 font-style: normal;
 text-decoration: underline;
 }
 
 /*----Sticky Nav-----*/
-nav {
+.nav-section {
   position: sticky;
   top: 0;
   background-color: #303030;
@@ -60,20 +60,21 @@ nav ul li {
   list-style: none;
   text-decoration: none;
   float: left;
-
 }
 
-li a {
+.nav-link {
   text-decoration: none;
+  font-style: normal;
+  font-weight: normal;
   color: white;
   scroll-behavior: smooth;
   margin: 8px 8px;
 }
 
-li a:hover {
+.nav-link:hover {
   font-weight: bold;
-  color: black;
-
+  color: lightgray;
+  text-decoration: none;
 }
 
 
@@ -132,7 +133,7 @@ main h1 {
   padding-bottom: 2em;
   padding-left: 1.5em;
   padding-right: 1.5em;
-  border-radius: 2%;
+  border-radius: 15%;
 
 }
 
@@ -140,10 +141,6 @@ main h1 {
 #portfolio {
   width:100vw;
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-flow: column nowrap;
   color: white;
   background: rgba(113, 142, 142, 0.9);
   background-size: cover;
@@ -322,81 +319,70 @@ footer p {
 }
 /*----Flexbox Images withing Portfolio Section-----*/
 .portfolio-items {
-  padding-left: 15%;
-  padding-right: 15%;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: center;
+  padding-left: 20%;
+  padding-right: 20%;
+  padding-bottom: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 1%;
   width: 100%;
-
+  height: 50%;
 }
 
-.image-container{
-	  width: 25%;
-    position: relative;
-    display: inline-flex;
-    margin: 0 4%;
+.image-container {
+    display: flex;
     justify-content: center;
-    flex: 1 2 1;
+    align-items: center;
+    height: 100%;
+    background-color: white;
+    color: transparent;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: all ease-in-out 300ms;
 }
 
-.image {
-  max-height: 450px;
-  max-width: 400px;
-  margin: 0%;
-  border: 1.5px solid white;
-  position: relative;
-  display: block;
-  z-index: 0;
-  background-color: #f2f2f2;
-  background-size: cover;
+.image-container.blog {
+  background-image: url('../img/AcerbicInq-Full-Logo-Final.png');
 }
-
-
-.overlay {
-  position: absolute;
-  bottom: 0%;
-  left: 5%;
-  background: rgb(0, 0, 0);
-  background: rgba(0, 0, 0, 0.5); /* Black see-through */
-  color: #f1f1f1;
-  width: 100%;
-  max-width: 400px;
-  transition: .5s ease;
-  opacity: 0;
+.image-container.salon {
+  background-image: url("../img/GildaHairSalon.jpg");
+}
+.image-container.multisite {
+  background-image: url("../img/YahushaComesWebsite.jpg");
+}
+.image-container:hover {
+  background-blend-mode: multiply;
+  background-color: rgba(0, 0, 0, 0.7);
+  font-weight: 900;
+  letter-spacing: 0.2em;
+  text-decoration: none;
   color: white;
-  padding: 5%;
-  text-align: center;
-  z-index: 1;
+}
+.image-container a {
+  display: block;
+  height: 50%;
+  width: 20%;
+  border: 1px solid red;
+  position: absolute;
 }
 
-.image-container:hover .overlay {
-  opacity: 1;
-}
 
 /*----Resume Button in About Section-----*/
 .resume-button {
 display: block;
 margin: 0 auto;
-transform: translateX(-15%);
+width: 200px;
 }
-
-form {
-display: block;
-width: 50%;
-}
-
 button {
+  position: relative;
   font-size: 1.25em;
   font-family: Baskerville;
   color: white;
   border: 1px solid #f2f2f2;
   border-radius: 5px;
   background-color: transparent;
-  padding: 8% 80%;
-
-
+  padding: 8% 10%
 }
 
 button:hover {
