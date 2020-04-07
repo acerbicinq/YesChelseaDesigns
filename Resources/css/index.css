@@ -102,8 +102,7 @@ main h1 {
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: scroll;
-  overflow-x: hidden;
-  overflow-y: hidden;
+  overflow: hidden;
 }
 
 .hero h1 {
@@ -195,8 +194,12 @@ footer p {
 
 /*----Animated Scroll Down Button in Home-----*/
 .hero-button {
-  positon: absolute;
-  transform: translate(50%, 500%);
+  position: absolute;
+  transform: translate(300%, 300%);
+  left: 50%;
+  right: 50%;
+  margin: 0 auto;
+  color: transparent;
 }
 
 .hero-button span {
@@ -239,6 +242,7 @@ footer p {
 .nav-button {
   position: static;
   transform: translate(50%, 150%);
+  color: transparent;
 }
 
 .nav-button span {
@@ -281,6 +285,7 @@ footer p {
 .top-button {
   position: absolute;
   transform: translate(50%, 500%);
+  color: transparent;
 }
 
 .top-button span {
@@ -317,7 +322,7 @@ footer p {
     opacity: 0;
   }
 }
-/*----Flexbox Images withing Portfolio Section-----*/
+/*----Flexbox Images within Portfolio Section-----*/
 .portfolio-items {
   padding-left: 20%;
   padding-right: 20%;
@@ -332,41 +337,57 @@ footer p {
 .image-container {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-content: center;
+    flex-flow: column wrap;
     height: 100%;
-    background-color: white;
-    color: transparent;
+    background-color: black;
+    color: white;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    transition: all ease-in-out 300ms;
+
 }
 
-.image-container.blog {
-  background-image: url('../img/AcerbicInq-Full-Logo-Final.png');
+#quiz {
+  background-image: url('../img/spirited.jpg');
 }
-.image-container.salon {
+#salon {
   background-image: url("../img/GildaHairSalon.jpg");
 }
-.image-container.multisite {
+#multisite {
   background-image: url("../img/YahushaComesWebsite.jpg");
 }
-.image-container:hover {
+
+.hidden {
+  visibility: hidden;
+  transition: all ease-out 150ms;
+
+}
+.visible {
+  visibility: visible;
   background-blend-mode: multiply;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.9);
   font-weight: 900;
   letter-spacing: 0.2em;
   text-decoration: none;
   color: white;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  transition: all ease-in-out 300ms;
 }
-.image-container a {
+.visible a {
   display: block;
-  height: 50%;
-  width: 20%;
-  border: 1px solid red;
-  position: absolute;
+  margin: 0 auto;
+  padding-top: 4%;
+  height: 10%;
+  width: 60%;
+  position: static;
+  color: white;
+  border: 2px solid white;
 }
-
 
 /*----Resume Button in About Section-----*/
 .resume-button {
