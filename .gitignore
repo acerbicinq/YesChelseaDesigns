@@ -2,3 +2,4 @@
 .DS_Store
 /Resources/img*
 /Resources/pdf*
+/Resources/.DS_Store
