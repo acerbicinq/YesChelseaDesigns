@@ -128,10 +128,7 @@ main h1 {
 
 .hero-inner {
   border: 1px white solid;
-  padding-top: 3em;
-  padding-bottom: 2em;
-  padding-left: 1.5em;
-  padding-right: 1.5em;
+  padding: 3em 1.5em 2em 1.5em;
   border-radius: 15%;
 
 }
@@ -141,11 +138,7 @@ main h1 {
   width:100vw;
   height: 100vh;
   color: white;
-  background: rgba(113, 142, 142, 0.9);
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: scroll;
+  background: rgba(113, 142, 142, 0.9) no-repeat scroll center/cover;
   overflow: hidden;
 }
 /*----About Section CSS-----*/
@@ -157,11 +150,7 @@ main h1 {
   align-items: center;
   flex-flow: column nowrap;
   color: white;
-  background: rgba(108, 127, 102, 0.9);
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: scroll;
+  background: rgba(108, 127, 102, 0.9) no-repeat scroll center/cover;
   overflow: hidden;
 }
 /*----Contact Section CSS-----*/
@@ -173,11 +162,7 @@ main h1 {
   align-items: center;
   flex-flow: column nowrap;
   color: white;
-  background: rgba(127, 102, 102, 0.8);
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: scroll;
+  background: rgba(127, 102, 102, 0.8) no-repeat scroll center/cover;
   overflow: hidden;
 }
 .contact {
@@ -340,19 +325,15 @@ footer p {
     align-content: center;
     flex-flow: column wrap;
     height: 100%;
-    background-color: black;
+    background: black no-repeat center/cover;
     color: white;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-
 }
 
 #quiz {
   background-image: url('../img/spirited.jpg');
 }
-#salon {
-  background-image: url("../img/GildaHairSalon.jpg");
+#writer {
+  background-image: url("../img/fog.jpg");
 }
 #multisite {
   background-image: url("../img/YahushaComesWebsite.jpg");
