@@ -1,43 +1,47 @@
 //General Javascript Page
-
-
-
-
-
 //Portfolio onHover Animations
-const quiz = document.getElementById('quiz');
-const quizContent = document.getElementById('quiz-content');
-const writer = document.getElementById('writer');
-const writerContent = document.getElementById('writer-content');
-const multisite = document.getElementById('multisite');
-const multisiteContent = document.getElementById('multisite-content');
+const item1 = document.getElementById('item1');
+const item1Content = document.getElementById('item1-content');
+const item2 = document.getElementById('item2');
+const item2Content = document.getElementById('item2-content');
+const item3 = document.getElementById('item3');
+const item3Content = document.getElementById('item3-content');
 
-//Quiz
-quiz.addEventListener('mouseover', function(e) {
-  quizContent.classList.add('visible');
-  quizContent.classList.remove('hidden');
-});
-quiz.addEventListener('mouseout', function(e) {
-  quizContent.classList.add('hidden');
-  quizContent.classList.remove('visible');
-});
+let isMobile = false;
 
-//Writer's App
-writer.addEventListener('mouseover', function(e) {
-  writerContent.classList.add('visible');
-  writerContent.classList.remove('hidden');
-});
-writer.addEventListener('mouseout', function(e) {
-  writerContent.classList.add('hidden');
-  writerContent.classList.remove('visible');
-});
+function portfolio() {
+  if (screen.width <= 800) {
+    isMobile = true;
+  } if (!isMobile) {
+    //Item1
+    item1.addEventListener('mouseover', function(e) {
+      item1Content.classList.add('visible');
+      item1Content.classList.remove('hidden');
+    });
+    item1.addEventListener('mouseout', function(e) {
+      item1Content.classList.add('hidden');
+      item1Content.classList.remove('visible');
+    });
 
-//Multisite
-multisite.addEventListener('mouseover', function(e) {
-  multisiteContent.classList.add('visible');
-  multisiteContent.classList.remove('hidden');
-});
-multisite.addEventListener('mouseout', function(e) {
-  multisiteContent.classList.add('hidden');
-  multisiteContent.classList.remove('visible');
-});
+    //Item2
+    item2.addEventListener('mouseover', function(e) {
+      item2Content.classList.add('visible');
+      item2Content.classList.remove('hidden');
+    });
+    item2.addEventListener('mouseout', function(e) {
+      item2Content.classList.add('hidden');
+      item2Content.classList.remove('visible');
+    });
+
+    //Item 3
+    item3.addEventListener('mouseover', function(e) {
+      item3Content.classList.add('visible');
+      item3Content.classList.remove('hidden');
+    });
+    item3.addEventListener('mouseout', function(e) {
+      item3Content.classList.add('hidden');
+      item3Content.classList.remove('visible');
+    });
+  }
+}
+portfolio();

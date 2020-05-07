@@ -6,10 +6,10 @@
 }
 
 html {
-scroll-behavior: smooth;
-margin: 0;
-padding: 0;
-border: 0;
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
 
 body {
@@ -21,10 +21,10 @@ body {
 }
 
 p {
-margin: 0 auto;
-max-width: 750px;
-padding: 2rem;
-text-align: center;
+  margin: 0 auto;
+  max-width: 750px;
+  padding: 2rem;
+  text-align: center;
 }
 
 a {
@@ -35,8 +35,8 @@ a {
 }
 
 a:hover {
-font-style: normal;
-text-decoration: underline;
+  font-style: normal;
+  text-decoration: underline;
 }
 
 /*----Sticky Nav-----*/
@@ -44,16 +44,18 @@ text-decoration: underline;
   position: sticky;
   top: 0;
   background-color: #303030;
-  height: 40px;
+  height: 60px;
   width: 100%;
   display: flex;
   z-index: 2;
 }
 
 nav ul {
-height: 100%;
-width: 360px;
-margin: 8px auto;
+  height: 100%;
+  width: 100%;
+  margin: 8px auto;
+  display: inherit;
+  justify-content: center;
 }
 
 nav ul li {
@@ -66,9 +68,10 @@ nav ul li {
   text-decoration: none;
   font-style: normal;
   font-weight: normal;
+  font-size: 1.3em;
   color: white;
   scroll-behavior: smooth;
-  margin: 8px 8px;
+  margin: 8px;
 }
 
 .nav-link:hover {
@@ -97,11 +100,7 @@ main h1 {
   align-items: center;
   flex-flow: column nowrap;
   color: white;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.1),rgba(0, 0, 0, 0.1)), url('../img/IrishDesign.jpg');
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: scroll;
+  background: linear-gradient(rgba(0, 0, 0, 0.1),rgba(0, 0, 0, 0.1)), url('../img/IrishDesign.jpg') no-repeat scroll center/cover;
   overflow: hidden;
 }
 
@@ -129,14 +128,14 @@ main h1 {
 .hero-inner {
   border: 1px white solid;
   padding: 3em 1.5em 2em 1.5em;
-  border-radius: 15%;
-
+  border-radius: 70px;
 }
 
 /*----Portfolio Section CSS-----*/
 #portfolio {
   width:100vw;
   height: 100vh;
+  padding-top: 5%;
   color: white;
   background: rgba(113, 142, 142, 0.9) no-repeat scroll center/cover;
   overflow: hidden;
@@ -320,30 +319,39 @@ footer p {
 }
 
 .image-container {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    flex-flow: column wrap;
-    height: 100%;
-    background: black no-repeat center/cover;
-    color: white;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-flow: column wrap;
+  height: 100%;
+  background: black no-repeat center/cover;
+  color: white;
 }
 
-#quiz {
-  background-image: url('../img/spirited.jpg');
+#item1 {
+  background-image: url('../img/touka.png');
 }
-#writer {
+#item2 {
   background-image: url("../img/fog.jpg");
 }
-#multisite {
+#item3 {
   background-image: url("../img/YahushaComesWebsite.jpg");
 }
 
 .hidden {
   visibility: hidden;
   transition: all ease-out 150ms;
-
+  font-weight: 900;
+  letter-spacing: 0.2em;
+  text-decoration: none;
+  color: white;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
 }
+
 .visible {
   visibility: visible;
   background-blend-mode: multiply;
@@ -359,7 +367,8 @@ footer p {
   justify-content: center;
   transition: all ease-in-out 300ms;
 }
-.visible a {
+.visible a,
+.hidden a {
   display: block;
   margin: 0 auto;
   padding-top: 4%;
