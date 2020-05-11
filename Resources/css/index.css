@@ -100,7 +100,7 @@ main h1 {
   align-items: center;
   flex-flow: column nowrap;
   color: white;
-  background: linear-gradient(rgba(0, 0, 0, 0.1),rgba(0, 0, 0, 0.1)), url('../img/IrishDesign.jpg') no-repeat scroll center/cover;
+  background: #303030 url('../img/IrishDesign.jpg') no-repeat scroll center/cover;
   overflow: hidden;
 }
 
@@ -329,10 +329,10 @@ footer p {
 }
 
 #item1 {
-  background: black url('../img/touka.png') no-repeat 80%/cover;
+  background: black url('../img/touka.jpg') no-repeat 80%/cover;
 }
 #item2 {
-  background-image: url("../img/fog.jpg");
+  background: black url("../img/writer.jpg") no-repeat 51.5%/cover;;
 }
 #item3 {
   background-image: url("../img/Okorafor.jpg");

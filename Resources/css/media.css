@@ -161,7 +161,7 @@
     height: 250px;
     font-size: 0.9em;
     background-blend-mode: multiply;
-    background-color: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.4) no-repeat center/cover;
     border: 0.1em solid white;
   }
   .hidden {
